@@ -5,6 +5,8 @@
 var express = require('express');
 var app = express();
 
+// importing the timeStamp.js
+let timeStamp = require('./timeStamp')
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC 
 var cors = require('cors');
@@ -24,7 +26,8 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-
+// using the timeStamp controller
+app.use(timeStamp)
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
