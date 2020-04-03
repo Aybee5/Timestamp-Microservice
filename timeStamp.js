@@ -20,3 +20,4 @@ app.get("/api/timestamp/:date_string", (req, res) =>{
         }
     }
   })
+module.exports = app;
