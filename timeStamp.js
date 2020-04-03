@@ -1,11 +1,11 @@
-let express = require('express')
-let app = express()
+var express = require('express')
+var app = express()
 
 
 //Solution to the challenge
 app.get("/api/timestamp/:date_string", (req, res) =>{
-    let dateString = req.params.date_string
-    let date
+    var dateString = req.params.date_string
+    var date
     if (!dateString) {
         date = new Date()
     }
