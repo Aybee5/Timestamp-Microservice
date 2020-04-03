@@ -1,6 +1,6 @@
 // server.js
 // where your node app starts
-
+"use strict";
 // init project
 var express = require('express');
 var app = express();
