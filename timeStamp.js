@@ -10,7 +10,12 @@ app.get("/api/timestamp/:date_string", (req, res) =>{
         date = new Date()
     }
     else {
-        date = new Date(dateString)
+        if (isNaN(dateString)){
+            date = new Date(parseInt(dateString))
+        }
+        else{
+            date = new Date(dateString)
+        }
         }
     if (date.toString() === "Invalid Date") {
         res.json({error : date.toString()})
