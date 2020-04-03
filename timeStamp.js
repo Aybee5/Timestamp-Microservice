@@ -8,6 +8,7 @@ app.get("/api/timestamp/:date_string", (req, res) =>{
     let date
     if (!dateString) {
         date = new Date()
+        res.json({unix: date.getTime(), utc : date.toUTCString()})
     }
     else {
         date = new Date(dateString)
